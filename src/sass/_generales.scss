@@ -1,0 +1,27 @@
+@import 'variables';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-weight: $black;
+}
+
+h2{
+    font-weight: $black;
+}
+
+h3{
+    font-weight: $bold;
+}
+
+h4{
+    font-weight: $bold;
+}
+
+p{
+    font-weight: $regular;
+}

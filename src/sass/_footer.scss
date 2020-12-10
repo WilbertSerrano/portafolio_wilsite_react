@@ -1,0 +1,18 @@
+@import 'generales', 'variables';
+
+footer{
+    width: 100%;
+    height: 100px;
+    background: $celeste;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .redes{
+        i{
+            cursor: pointer;
+            color: $blanco;
+            font-size: 3rem;
+            margin-right: 20px;
+        }
+    }
+}

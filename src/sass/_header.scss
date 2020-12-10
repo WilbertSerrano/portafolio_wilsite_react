@@ -1,0 +1,119 @@
+@import 'generales', 'variables';
+
+header.header{
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+    padding-left: 10%;
+    padding-right: 10%;
+    background: $negro;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $blanco;
+    .texto-header{
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        p#hola-header{
+            font-size: 1.5625em;
+            margin-bottom: 0px;
+        }
+        h1#nombre-header{
+            font-size: 3.4375em;
+            margin-top: -15px;
+            margin-bottom: -5px;
+        }
+        p#especialidad-header{
+            font-size: 1.125em;
+            margin-bottom: 30px;
+        }
+        button#btn-header{
+            color: $blanco;
+            font-weight: $bold;
+            font-size: 1.125em;
+            background: $celeste;
+            border: none;
+            padding: 15px 60px;
+            border-radius: 15px;
+            margin-bottom: 10%;
+            cursor: pointer;
+            &:hover{
+                background: $blanco;
+                color: $celeste;
+                transition: ease-in-out .25s;
+            }
+        }
+    }
+    .img-header{
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        img{
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    header.header{
+        font-size: 14px;
+        height: auto;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;  
+        justify-content: center;
+        align-items: center;
+        :nth-child(1){
+            order:2;
+        }
+        :nth-child(2){
+            order:1;
+        }
+        .texto-header{
+            height: 100%;
+            width: 95%;
+            justify-content: center;
+            align-items: center;
+            #hola-header{
+                text-align: center;
+                display: none;
+            }
+            #nombre-header{
+                margin-top: 0;
+                margin-bottom: 0;
+                text-align: center;
+            }
+        }
+        .img-header{
+            height: auto;
+            margin-bottom: 30px;
+            img{
+                max-width: 450px;
+                height: auto;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 475px){
+    header.header{
+        font-size: 12px;
+        .texto-header{
+            h1#nombre-header{
+                font-size: 3em;
+            }
+        }
+        .img-header{
+            img{
+                max-width: 340px;
+                height: auto;
+            }
+        }
+    }
+}

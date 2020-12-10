@@ -1,0 +1,178 @@
+@import 'generales', 'variables';
+
+section.proyectos-destacados-home{
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    height: 700px;
+    background: $gris-claro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-size: 3.4375em;
+        margin-bottom: 70px;
+        text-align: center;
+    }
+    .tarjetas{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        .tarjeta-proyecto{
+            width: 50%;
+            height: 320px;
+            background: $blanco;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            margin-left: 10px; 
+            img.img-proyecto{
+                width: 50%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 25px 0 0 25px;
+            }
+            .texto-proyecto{
+                height: 90%;
+                width: 50%;
+                padding-left: 20px;
+                padding-right: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                h4{
+                    font-size: 1.5em;
+                    text-align: center;
+                }
+                p{
+                    font-size: 1em;
+                    text-align: center;
+                }
+                button.ver-proyecto{
+                    background: $celeste;
+                    color: $blanco;
+                    border: none;
+                    border-radius: 15px;
+                    padding: 10px 40px;
+                    font-size: 1em;
+                    font-weight: $bold;
+                    cursor: pointer;
+                    &:hover{
+                        background: $negro;
+                        transition: ease-in-out .25s;
+                    }
+                }
+            }
+        }
+    }
+    button.mas-proyectos{
+        margin-top: 70px;
+        background: $celeste;
+        color: $blanco;
+        border: none;
+        border-radius: 15px;
+        padding: 10px 40px;
+        font-size: 1.25em;
+        font-weight: $bold;
+        cursor: pointer;
+        &:hover{
+            background: $negro;
+            transition: ease-in-out .25s;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    section.proyectos-destacados-home{
+        font-size: 14px;
+        height: 1000px;
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-content: space-evenly;
+        h2{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .tarjetas{
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .tarjeta-proyecto{
+                height: 600px;
+                max-width: 370px;
+                margin-right: 10px;
+                margin-left: 10px;
+                flex-direction: column;
+                justify-content: space-between;
+                img.img-proyecto{
+                    border-radius: 25px 25px 0 0;
+                    width: 100%;
+                    height: 300px;
+                }
+                .texto-proyecto{
+                    width: 100%;
+                    height: 300px;
+                    h4{
+                        font-size: 2.3em;
+                    }
+                    p{
+                        font-size: 1.3em;
+                    }
+                }
+            }
+        }
+        button.mas-proyectos{
+            margin-top: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 675px){
+    section.proyectos-destacados-home{
+        height: 1500px;
+        h2{
+            font-size: 2.8em;
+        }
+        .tarjetas{
+            flex-direction: column;
+            height: auto;
+            .tarjeta-proyecto{
+                max-width: 100%;
+                min-width: 430px;
+                height: 600px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 20px;
+                img{
+                    height: 300px;
+                }
+                .texto-proyecto{
+                    height: 300px;
+                }
+            }
+        }
+        button.mas-proyectos{
+            margin-top: -20px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    section.proyectos-destacados-home{
+        font-size: 12px;
+        .tarjetas{
+            .tarjeta-proyecto{
+                width: 100%;
+                max-width: 350px;
+                min-width: 300px;
+            }
+        }
+    }
+}
